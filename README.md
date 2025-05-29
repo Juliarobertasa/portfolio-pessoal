@@ -40,7 +40,7 @@ Este é um projeto pessoal, mas estou aberta a feedback e sugestões! Sinta-se �
 
 ## Conecte-se comigo:
 
-* **LinkedIn:** [Seu perfil do LinkedIn](https://www.linkedin.com/in/juliarobertasouza/)
-* **GitHub:** [Seu perfil do GitHub](https://github.com/juliarobertasa)
-* **E-mail:** juliaroberta2412@gmail.com
+* **[LinkedIn](https://www.linkedin.com/in/juliarobertasouza/)**
+* **[GitHub](https://github.com/juliarobertasa)**
+* **juliaroberta2412@gmail.com**
 
