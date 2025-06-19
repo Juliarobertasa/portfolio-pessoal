@@ -32,3 +32,29 @@ Com base na proposta do sistema, foram elaboradas as seguintes histórias de usu
 | Desenvolvedora/Analista (Júlia) | Atualizar o portfólio de forma contínua | Refletir crescimento e aprendizado ao longo do tempo |
 | Desenvolvedora/Analista (Júlia) | Inserir testes, modelagens e documentação técnica | Demonstrar domínio de ferramentas e metodologias profissionais |
 | Desenvolvedora/Analista (Júlia) | Facilitar contato por LinkedIn e GitHub | Melhorar canais de interação com recrutadores e a comunidade |
+
+## Requisitos
+
+As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. Para determinar a prioridade de requisitos, aplicar uma técnica de priorização de requisitos e detalhar como a técnica foi aplicada.
+
+### Requisitos Funcionais
+
+|ID    | Descrição do Requisito  | Prioridade |
+|------|-----------------------------------------|----|
+|RF-001| A aplicação deve exibir uma página inicial com informações introdutórias sobre a profissional. | Alta |
+|RF-002| A aplicação deve conter uma página "Sobre" com a descrição das principais competências da profissional | Alta |
+|RF-003| A aplicação deve apresentar uma seção com o resumo dos principais projetos realizados. | Alta |
+|RF-004| A aplicação deve disponibilizar uma página com informações de contato da profissional. | Alta |
+|RF-005| A aplicação deve permitir o download do currículo da profissional em formato PDF. | Alta |
+|RF-006| A aplicação deve permitir a visualização detalhada de cada projeto em páginas individuais. | Média |
+|RF-007| A aplicação deve permitir ao usuário alternar entre o tema claro e escuro da interface. | Baixa |
+
+### Requisitos não Funcionais
+
+|ID    | Descrição do Requisito  | Prioridade |
+|------|-----------------------------------------|----|
+|RNF-001|	O site deve ser hospedado em um ambiente acessível publicamente pela Internet, com disponibilidade 24 horas por dia.  | Alta | 
+|RNF-002| O site deve apresentar bom nível de contraste entre elementos da interface, em conformidade com diretrizes de acessibilidade (WCAG 2.1). | Alta | 
+|RNF-003|	O site deve ser compatível com os principais navegadores do mercado: Google Chrome, Mozilla Firefox e Microsoft Edge. | Alta |
+|RNF-004| O site deve ser responsivo, permitindo visualização adequada em dispositivos móveis (smartphones e tablets). | Baixa | 
+
