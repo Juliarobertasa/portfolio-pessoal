@@ -58,3 +58,18 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RNF-003|	O site deve ser compatível com os principais navegadores do mercado: Google Chrome, Mozilla Firefox e Microsoft Edge. | Alta |
 |RNF-004| O site deve ser responsivo, permitindo visualização adequada em dispositivos móveis (smartphones e tablets). | Baixa | 
 
+## Modelagem do Processo de Negócio 
+
+O presente diagrama BPMN tem como objetivo representar o fluxo de navegação do usuário no portfólio pessoal da desenvolvedora, descrevendo as possíveis interações a partir do momento em que o site é acessado. O modelo foi elaborado com foco na experiência do usuário.
+
+O processo modelado contempla apenas as ações realizadas pelo usuário final e as respostas visuais do sistema (site), desde o carregamento da página inicial até o encerramento da navegação em uma das seções.
+
+O processo é iniciado quando o usuário acessa a URL do site, o que aciona o carregamento automático da página inicial.
+
+Cada linha de execução termina com um evento de fim chamado "Fim da navegação", o qual indica que não há mais ações previstas naquela sequência, mesmo que o site continue aberto. Esse termo não representa o fechamento do navegador ou a saída completa do sistema, mas sim o término de uma navegação lógica específica.
+
+### Observações
+O processo está contido dentro de uma piscina (Pool) com o título Portfólio Pessoal.
+Como o processo está centrado nas interações do usuário, não foram utilizadas lanes (raias) para separar participantes, mantendo a modelagem simples e objetiva.
+
+<img src="https://github.com/Juliarobertasa/portfolio-pessoal/blob/main/docs/img/modelagem-portfoliopessoal.png" alt="Mapa de processo">
