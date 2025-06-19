@@ -6,7 +6,7 @@ Bem-vindo(a) ao meu portfólio pessoal! Esse projeto está sendo desenvolvido pa
 
 <ol>
 <li><a href="docs/01-Documentação de Contexto.md"> Documentação de Contexto</a></li>
-<li><a href="docs/02-Especificação do Projeto.md"> Especificação do Projeto</a></li>
+<li><a href="docs/02-Especificações do Projeto.md"> Especificação do Projeto</a></li>
 
 </ol>
 
