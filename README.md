@@ -2,6 +2,14 @@
 ## Sobre o projeto 
 Bem-vindo(a) ao meu portfólio pessoal! Esse projeto está sendo desenvolvido para colocar em prática os conceitos de análise de sistemas, engenharia de requisitos, modelagem de processos, design de interface e desenvolvimento web. Além disso, a ideia é criar um ambiente onde eu possa divulgar e expor os meus projetos pessoais e as minhas principais habilidades.
 
+## Documentação
+
+<ol>
+<li><a href="docs/01-Documentação de Contexto.md"> Documentação de Contexto</a></li>
+<li><a href="docs/02-Especificação do Projeto.md"> Especificação do Projeto</a></li>
+
+</ol>
+
 ## Tecnologias Utilizadas 
 
 Aqui estão as principais tecnologias e ferramentar que utilizei ou pretendo utilizar neste projeto:
