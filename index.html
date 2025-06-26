@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Desenvolvedora web e analista de sistemas">
+    <link rel="stylesheet" href="style.css">
     <title>Júlia Roberta</title>
 </head>
 <body>
@@ -18,71 +19,88 @@
        </nav> 
     </header>
     <main>
-        <section>
+        <section id="pagina-principal">
             <div class="foto"></div>
             <div>
-                <h1>Oi, eu sou a Júlia Roberta!</h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae aliquid, sed veritatis ut quaerat necessitatibus corrupti ex dolor quae, dolorum suscipit illum non hic nesciunt. A, earum. Ullam, tempora aspernatur!
+                <h1 id="apresentacao">Oi, eu sou a Júlia Roberta!</h1>
+                <p class="texto-principal">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae aliquid, sed veritatis ut quaerat necessitatibus corrupti ex dolor quae, dolorum suscipit illum non hic nesciunt. A, earum. Ullam, tempora aspernatur!
                 </p>
-                <div class="social-icons">
-                    <a href="https://github.com/Juliarobertasa">
+                <div id="social-icons-inicio">
+                    <a href="https://github.com/Juliarobertasa" class="social-icons-principal">
                         <img src="img/botao-github.png" alt="GitHub">
                     </a>
-                    <a href="https://www.linkedin.com/in/juliarobertasouza/">
+                    <a href="https://www.linkedin.com/in/juliarobertasouza/" class="social-icons-principal">
                         <img src="img/botao-linkedin.png" alt="Linkedin">
                     </a>
-                    <button onclick="copiarEmail()">
+                    <button onclick="copiarEmail()" class="social-icons-principal">
                         <img src="img/botao-mail.png" alt="e-mail">
                     </button>
                 </div>
             </div>
         </section>
-        <section>
+        <section id="sobre">
             <div>
-                <h1>Sobre mim</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quam, hic non eius repellat a, animi voluptates iste neque eaque optio quis aut. Placeat non alias consequatur enim nam pariatur. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis id ipsa, nobis ex deserunt dolores atque saepe fugit quo necessitatibus numquam at fuga! Perferendis esse ducimus voluptatibus consequatur sed. Aperiam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta similique facilis, aspernatur doloribus officiis eum vitae quis itaque neque nisi quidem debitis sed suscipit dolores aperiam molestias minima quam officia?</p>
+                <h1 class="titulo">Sobre mim</h1>
+                <p class="texto-principal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quam, hic non eius repellat a, animi voluptates iste neque eaque optio quis aut. Placeat non alias consequatur enim nam pariatur. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis id ipsa, nobis ex deserunt dolores atque saepe fugit quo necessitatibus numquam at fuga! Perferendis esse ducimus voluptatibus consequatur sed. Aperiam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta similique facilis, aspernatur doloribus officiis eum vitae quis itaque neque nisi quidem debitis sed suscipit dolores aperiam molestias minima quam officia?</p>
             </div>
-            <a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum eaque culpa tempore perspiciatis dolor nisi voluptatum, accusantium voluptas ex. Aliquid, voluptates. Error esse quam, perferendis repellendus eaque autem possimus odio.</a>
+            <a href="" id="link-download">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum eaque culpa tempore perspiciatis dolor nisi voluptatum, accusantium voluptas ex. Aliquid, voluptates. Error esse quam, perferendis repellendus eaque autem possimus odio.</a>
         </section>
-        <section>
-            <h1>Experiências</h1>
-            <div>
-                <span>Jan/2025<br>O momento</span>
-                <div>
-                    <h2>Estagiária em modelagem de processos</h2>
-                    <h3>Fundação Ezequiel Dias - FUNED</h3>
-                    <p>Atuo como estagiária no setor de Gestão de Processos de Negócio da Fundação Ezequiel Dias (FUNED), onde realizo a modelagem de processos utilizando Bizagi e notação BPMN, além do desenvolvimento de dashboards em Power BI voltados para análises gerenciais. Também colaboro na gestão e otimização de fluxos internos, apoio treinamentos e iniciativas de melhoria contínua, elaboro materiais visuais com Figma e contribuo na realização de auditorias internas.</p>
-                    <p>Gestão de projetos, Análise de dados, Modelagem de processos, Melhoria contínua, Bizagi, Power BI, Auditoria interna, Microsoft Office.</p>
+        <section id="experiencias">
+            <h1 class="titulo">Experiências</h1>
+            <div id="bloco-experiencia">
+                <span class="periodo-experiencia">Jan/2025<br>O momento</span>
+                <div class="experiencia">
+                    <h2 class="titulo-experiencia">Estagiária em modelagem de processos</h2>
+                    <h3 class="subtitulo-experiencia">Fundação Ezequiel Dias - FUNED</h3>
+                    <p class="texto-secundario">Atuo como estagiária no setor de Gestão de Processos de Negócio da Fundação Ezequiel Dias (FUNED), onde realizo a modelagem de processos utilizando Bizagi e notação BPMN, além do desenvolvimento de dashboards em Power BI voltados para análises gerenciais. Também colaboro na gestão e otimização de fluxos internos, apoio treinamentos e iniciativas de melhoria contínua, elaboro materiais visuais com Figma e contribuo na realização de auditorias internas.</p>
+                    <p class="texto-secundario">Gestão de projetos, Análise de dados, Modelagem de processos, Melhoria contínua, Bizagi, Power BI, Auditoria interna, Microsoft Office.</p>
                 </div>
             </div>
-            <div>
-                <span>Set/2020<br>Nov/2020</span>
-                <div>
-                    <h2>Executiva de Vnedas</h2>
-                    <h3>Avon</h3>
-                    <p>Atuei como Executiva de Vendas na Avon, sendo responsável por coordenar e acompanhar uma equipe de mais de 150 revendedoras. Minhas atividades incluíam o suporte direto às vendas, orientação estratégica para o alcance de metas e desenvolvimento de ações de incentivo. Também liderei a prospecção e o cadastro de novas revendedoras, contribuindo para o crescimento da rede de vendas da região.</p>
-                    <p>Escuta ativa, Comunicação assertiva, Organização, Tomada de decisão, Empatia, Liderança, Visão de metas e performance, Técnicas de vendas e negociação.</p>
+            <div id="bloco-experiencia">
+                <span class="periodo-experiencia">Set/2020<br>Nov/2020</span>
+                <div class="experiencia">
+                    <h2 class="titulo-experiencia">Executiva de Vnedas</h2>
+                    <h3 class="subtitulo-experiencia">Avon</h3>
+                    <p class="texto-secundario">Atuei como Executiva de Vendas na Avon, sendo responsável por coordenar e acompanhar uma equipe de mais de 150 revendedoras. Minhas atividades incluíam o suporte direto às vendas, orientação estratégica para o alcance de metas e desenvolvimento de ações de incentivo. Também liderei a prospecção e o cadastro de novas revendedoras, contribuindo para o crescimento da rede de vendas da região.</p>
+                    <p class="texto-secundario">Escuta ativa, Comunicação assertiva, Organização, Tomada de decisão, Empatia, Liderança, Visão de metas e performance, Técnicas de vendas e negociação.</p>
                 </div>
             </div>
         </section>
         <section>
-            <h1>Projetos</h1>
-            <div>
-                <h2>Portifólio Pessoal</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure ratione perferendis cupiditate eveniet velit? Nihil obcaecati ratione dicta eos delectus tempora quibusdam sit, commodi, nesciunt mollitia incidunt ullam eum labore.</p>
-                <a href="">Veja mais</a>
-            </div>
-            <div>
-                <h2>Aplicativo Well Mind</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos iusto quas omnis doloribus quia tempora saepe quae repellat facere minus, ducimus distinctio, nulla mollitia error tenetur cum qui dolorem labore?</p>
-                <a href="">Veja mais</a>
-            </div>
-            <div>
-                <h2>Site Kune</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ratione odio corrupti rerum optio totam, facere quod doloribus debitis quo, magni illo nemo! Sed similique reprehenderit fugit aliquam qui excepturi.</p>
-                <a href="">Veja mais</a>
+            <h1 class="titulo">Projetos</h1>
+            <div id="todos-projetos">
+                <div class="projeto">
+                    <h2 class="titulo-projeto">Portifólio Pessoal</h2>
+                    <p class="texto-secundario">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure ratione perferendis cupiditate eveniet velit? Nihil obcaecati ratione dicta eos delectus tempora quibusdam sit, commodi, nesciunt mollitia incidunt ullam eum labore.</p>
+                    <a href="">Veja mais</a>
+                </div>
+                <div class="projeto">
+                    <h2 class="titulo-projeto">Aplicativo Well Mind</h2>
+                    <p class="textp-secundario">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos iusto quas omnis doloribus quia tempora saepe quae repellat facere minus, ducimus distinctio, nulla mollitia error tenetur cum qui dolorem labore?</p>
+                    <a href="">Veja mais</a>
+                </div>
+                <div class="projeto">
+                    <h2 class="titulo-projeto">Site Kune</h2>
+                    <p class="textp-secundario">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ratione odio corrupti rerum optio totam, facere quod doloribus debitis quo, magni illo nemo! Sed similique reprehenderit fugit aliquam qui excepturi.</p>
+                    <a href="">Veja mais</a>
+                </div>
             </div>
 
+        </section>
+        <section>
+            <h1 class="titulo">Contatos</h1>
+            <p>Gostou dos meus projetos, quer saber mais sobre mim ou trocar experiências? Fique à vontade para entrar em contato pelas minhas redes sociais ou pelo meu e-mail. <b>Será um prazer conversar, compartilhar ideias e fazer networking!</b></p>
+            <div id="social-icons-contatos">
+                <a href="https://github.com/Juliarobertasa" class="social-icons-contato">
+                    <img src="img/botao-github.png" alt="GitHub">
+                </a>
+                <a href="https://www.linkedin.com/in/juliarobertasouza/" class="social-icons-contato">
+                    <img src="img/botao-linkedin.png" alt="LinkedIn">
+                </a>
+                <button onclick="copiarEmail()" id="social-email">
+                    <p>juliaroberta2412@gmail.com</p>
+                </button>
+            </div>
         </section>
     </main>
     <footer>
