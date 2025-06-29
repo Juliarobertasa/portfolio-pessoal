@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@200;400&family=Roboto:wght@100&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    font-size: 100%;
+}
+
+#cabecalho {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+    border-bottom: 1px solid rgba(194, 148, 132, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+#cabecalho-nome{
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    color: rgba(199, 13, 153, 1);
+    font-weight: 1000;
+    font-size: 25px; 
+}
+
+#cabecalho-menu {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+#cabecalho-menu a{
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: rgba(26, 18, 105, 1);
+}
+
+#pagina-principal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 200px;
+}
+
+#pagina-principal-foto img {
+    width: 425px;
+    height: 425px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: rgba(194, 148, 132, 0.4);
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+}
+
