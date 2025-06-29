@@ -16,19 +16,19 @@ body{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 24px;
+    padding: 24px 90px;
     border-bottom: 1px solid rgba(194, 148, 132, 0.4);
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 999;
+    background-color: white;
     box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.1);
 }
 
 #cabecalho-nome{
     font-family: "Poppins", sans-serif;
-    font-weight: 200;
     font-style: normal;
     color: rgba(199, 13, 153, 1);
     font-weight: 1000;
@@ -53,16 +53,69 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
-    padding: 200px;
+    justify-content: center;
+    gap: 55px;
+    padding: 175px 200px;
 }
 
 #pagina-principal-foto img {
-    width: 425px;
-    height: 425px;
+    width: 400px;
+    height: 400px;
     object-fit: cover;
     border-radius: 50%;
     border: rgba(194, 148, 132, 0.4);
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
 }
+
+#pagina-principal-apresentacao{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#pagina-principal-titulo{
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    color: rgba(26, 18, 105, 1);
+    font-weight: 600;
+    font-size: 32px; 
+}
+
+.texto-principal{
+    font-family: "Poppins", sans-serif;
+    font-size: normal;
+    color: rgba(1, 22, 56, 1);
+    font-weight: 100px;
+    font-size: 18px;
+}
+
+#pagina-principal-social-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.pagina-principal-social-icons{
+    display: flex;
+    width: 70px;
+    height: 70px;
+    border: 1px solid rgba(194, 148, 132, 0.4);
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+.pagina-principal-social-icons img{
+    width: 35px;
+    height: 35px;
+}
+
+.pagina-principal-social-icons:hover{
+    background-color: #fbe4f2;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
 
