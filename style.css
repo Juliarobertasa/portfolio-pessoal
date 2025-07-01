@@ -54,13 +54,13 @@ body{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 55px;
-    padding: 175px 200px;
+    gap: 100px;
+    padding: 175px 400px;
 }
 
 #pagina-principal-foto img {
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     object-fit: cover;
     border-radius: 50%;
     border: rgba(194, 148, 132, 0.4);
@@ -113,9 +113,51 @@ body{
 }
 
 .pagina-principal-social-icons:hover{
-    background-color: #fbe4f2;
+    background-color: rgba(194, 148, 132, 0.4);
     transform: scale(1.05);
     cursor: pointer;
 }
 
+#pagina-sobre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    padding: 175px 400px;
+    background-color: rgba(244, 244, 244, 0.6);
+}
 
+#pagina-sobre-informacoes {
+  display: flex;
+  flex-direction: column;
+  gap: 24px; 
+  text-align: justify;
+}
+
+.titulo{
+    font-family: "Poppins", "sans-serif";
+    font-style: normal;
+    color: rgba(199, 13, 153, 1);
+}
+
+#link-download{
+    font-family: "Poppins", "sans-serif";
+    font-style: normal;
+    font-weight: 600;
+    color: rgba(194, 148, 132, 1);
+
+}
+
+#pagina-sobre-link{
+    display: flex;
+    text-align: center;
+}
+
+#pagina-experiencias{
+    display: flex;
+    flex-direction: column;
+    align-items: justify;
+    gap: 25px;
+    padding: 175px 400px;
+}
