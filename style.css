@@ -1,16 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@200;400&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@200;400;600;700&family=Roboto:wght@100;400&display=swap');
 
-*{
+:root {
+    --cor-primaria: #c70d99;
+    --cor-primaria-escura: #a00a7a;
+    --cor-primaria-clara: #e83db8;
+    --cor-secundaria: #1a1269;
+    --cor-texto: #011638;
+    --cor-texto-claro: #666;
+    --cor-fundo: #ffffff;
+    --cor-fundo-secao: #f4f4f4;
+    --cor-borda: #c2948470;
+    
+    --fonte-principal: 'Poppins', sans-serif;
+    --fonte-secundaria: 'Roboto', sans-serif;
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
 }
 
-body{
-    font-size: 100%;
+html {
+    scroll-behavior: smooth;
 }
 
+body {
+    font-family: var(--fonte-principal);
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+    line-height: 1.6;
+}
+
+/* ==================== HEADER ==================== */
 #cabecalho {
     display: flex;
     flex-direction: row;
@@ -27,12 +49,18 @@ body{
     box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.1);
 }
 
-#cabecalho-nome{
-    font-family: "Poppins", sans-serif;
-    font-style: normal;
-    color: rgba(199, 13, 153, 1);
-    font-weight: 1000;
-    font-size: 25px; 
+#cabecalho-nome {
+    font-family: var(--fonte-principal);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--cor-primaria);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+#cabecalho-nome:hover {
+    color: var(--cor-primaria-escura);
+    transform: scale(1.05);
 }
 
 #cabecalho-menu {
@@ -41,14 +69,36 @@ body{
     align-items: center;
 }
 
-#cabecalho-menu a{
-    font-family: "Poppins", sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    color: rgba(26, 18, 105, 1);
+#cabecalho-menu a {
+    font-family: var(--fonte-principal);
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--cor-texto);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
 }
 
+#cabecalho-menu a:hover {
+    color: var(--cor-primaria);
+}
+
+#cabecalho-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--cor-primaria);
+    transition: width 0.3s ease;
+}
+
+#cabecalho-menu a:hover::after {
+    width: 100%;
+}
+
+/* ==================== SEÇÃO PRINCIPAL ==================== */
 #pagina-principal {
     display: flex;
     flex-direction: row;
@@ -56,6 +106,8 @@ body{
     justify-content: center;
     gap: 100px;
     padding: 175px 400px;
+    margin-top: 100px;
+    background: linear-gradient(135deg, rgba(199, 13, 153, 0.05) 0%, rgba(26, 18, 105, 0.05) 100%);
 }
 
 #pagina-principal-foto img {
@@ -63,62 +115,77 @@ body{
     height: 300px;
     object-fit: cover;
     border-radius: 50%;
-    border: rgba(194, 148, 132, 0.4);
+    border: 4px solid var(--cor-primaria);
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+    animation: flutuarImagem 3s ease-in-out infinite;
 }
 
-#pagina-principal-apresentacao{
+@keyframes flutuarImagem {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+#pagina-principal-apresentacao {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-#pagina-principal-titulo{
-    font-family: "Poppins", sans-serif;
-    font-style: normal;
-    color: rgba(26, 18, 105, 1);
-    font-weight: 600;
-    font-size: 32px; 
+#pagina-principal-titulo {
+    font-family: var(--fonte-principal);
+    color: var(--cor-secundaria);
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 1.2;
 }
 
-.texto-principal{
-    font-family: "Poppins", sans-serif;
-    font-size: normal;
-    color: rgba(1, 22, 56, 1);
-    font-weight: 100px;
-    font-size: 18px;
+.texto-principal {
+    font-family: var(--fonte-principal);
+    font-size: 1.1rem;
+    color: var(--cor-texto-claro);
+    font-weight: 400;
+    line-height: 1.8;
 }
 
-#pagina-principal-social-icons{
+#pagina-principal-social-icons {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 15px;
+    margin-top: 20px;
 }
 
-.pagina-principal-social-icons{
+.pagina-principal-social-icons {
     display: flex;
     width: 70px;
     height: 70px;
-    border: 1px solid rgba(194, 148, 132, 0.4);
+    border: 2px solid rgba(194, 148, 132, 0.4);
     border-radius: 50%;
     justify-content: center;
     align-items: center;
     background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
 }
 
-.pagina-principal-social-icons img{
+.pagina-principal-social-icons img {
     width: 35px;
     height: 35px;
 }
 
-.pagina-principal-social-icons:hover{
+.pagina-principal-social-icons:hover {
     background-color: rgba(194, 148, 132, 0.4);
-    transform: scale(1.05);
-    cursor: pointer;
+    transform: scale(1.1);
+    border-color: var(--cor-primaria);
 }
 
-#pagina-sobre{
+/* ==================== SEÇÃO SOBRE ==================== */
+#pagina-sobre {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -129,35 +196,345 @@ body{
 }
 
 #pagina-sobre-informacoes {
-  display: flex;
-  flex-direction: column;
-  gap: 24px; 
-  text-align: justify;
-}
-
-.titulo{
-    font-family: "Poppins", "sans-serif";
-    font-style: normal;
-    color: rgba(199, 13, 153, 1);
-}
-
-#link-download{
-    font-family: "Poppins", "sans-serif";
-    font-style: normal;
-    font-weight: 600;
-    color: rgba(194, 148, 132, 1);
-
-}
-
-#pagina-sobre-link{
     display: flex;
+    flex-direction: column;
+    gap: 24px;
+    text-align: justify;
+    max-width: 800px;
+}
+
+#pagina-sobre-link {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#link-download {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--cor-primaria);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#link-download:hover {
+    background-color: var(--cor-primaria-escura);
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.titulo {
+    font-family: var(--fonte-principal);
+    color: var(--cor-primaria);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 1.5rem;
+}
+
+.titulo::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--cor-primaria), var(--cor-primaria-clara));
+    border-radius: 2px;
+}
+
+/* ==================== SEÇÃO EXPERIÊNCIAS ==================== */
+#pagina-experiencias {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 175px 400px;
+}
+
+#bloco-experiencia {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.periodo-experiencia {
+    color: var(--cor-primaria);
+    font-weight: 700;
+    min-width: 100px;
     text-align: center;
 }
 
-#pagina-experiencias{
+.experiencia {
+    background-color: var(--cor-fundo-secao);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    flex-grow: 1;
+}
+
+.experiencia:hover {
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+.titulo-experiencia {
+    color: var(--cor-primaria);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.subtitulo-experiencia {
+    color: var(--cor-texto);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.texto-secundario {
+    color: var(--cor-texto-claro);
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+/* ==================== SEÇÃO PROJETOS ==================== */
+#todos-projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.projeto {
+    background-color: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border-bottom: 4px solid var(--cor-primaria);
+}
+
+.projeto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.titulo-projeto {
+    color: var(--cor-primaria);
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--cor-primaria);
+    padding-bottom: 1rem;
+}
+
+.projeto a {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--cor-primaria);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid var(--cor-primaria);
+    margin-top: 1.5rem;
+}
+
+.projeto a:hover {
+    background-color: transparent;
+    color: var(--cor-primaria);
+}
+
+/* ==================== SEÇÃO CONTATOS ==================== */
+#social-icons-contatos {
     display: flex;
-    flex-direction: column;
-    align-items: justify;
-    gap: 25px;
-    padding: 175px 400px;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.social-icons-contato {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid var(--cor-primaria);
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: var(--cor-primaria);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icons-contato:hover {
+    background-color: var(--cor-primaria);
+    color: white;
+    transform: scale(1.15);
+}
+
+#social-email {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid var(--cor-primaria);
+    background-color: transparent;
+    border-radius: 50px;
+    color: var(--cor-primaria);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    font-family: var(--fonte-principal);
+    text-decoration: none;
+}
+
+#social-email:hover {
+    background-color: var(--cor-primaria);
+    color: white;
+}
+
+#social-email p {
+    margin: 0;
+}
+
+/* ==================== FOOTER ==================== */
+footer {
+    background: linear-gradient(135deg, var(--cor-secundaria), var(--cor-primaria-escura));
+    color: white;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+/* ==================== RESPONSIVO ==================== */
+@media (max-width: 768px) {
+    #cabecalho {
+        padding: 20px;
+        justify-content: space-between;
+    }
+
+    #cabecalho-menu {
+        display: none;
+    }
+
+    #pagina-principal {
+        grid-template-columns: 1fr;
+        margin-top: 80px;
+        padding: 1.5rem;
+        gap: 1.5rem;
+        flex-direction: column;
+    }
+
+    #pagina-principal-titulo {
+        font-size: 1.8rem;
+    }
+
+    #pagina-principal-foto img {
+        width: 200px;
+        height: 200px;
+    }
+
+    #pagina-sobre {
+        padding: 1.5rem;
+    }
+
+    #pagina-experiencias {
+        padding: 1.5rem;
+    }
+
+    #bloco-experiencia {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #todos-projetos {
+        grid-template-columns: 1fr;
+    }
+
+    .titulo {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #cabecalho {
+        padding: 15px;
+    }
+
+    #cabecalho-nome {
+        font-size: 1.2rem;
+    }
+
+    #pagina-principal {
+        padding: 1rem 0.5rem;
+    }
+
+    #pagina-principal-titulo {
+        font-size: 1.5rem;
+    }
+
+    #pagina-principal-foto img {
+        width: 150px;
+        height: 150px;
+    }
+
+    #pagina-principal-social-icons {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .pagina-principal-social-icons {
+        width: 60px;
+        height: 60px;
+    }
+
+    #pagina-sobre {
+        padding: 1rem 0.5rem;
+    }
+
+    #pagina-experiencias {
+        padding: 1rem 0.5rem;
+    }
+
+    .titulo {
+        font-size: 1.3rem;
+    }
+
+    #social-email {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #social-email p {
+        word-break: break-word;
+    }
+
+    #todos-projetos {
+        gap: 1.5rem;
+    }
+
+    .projeto {
+        padding: 1.5rem;
+    }
 }
